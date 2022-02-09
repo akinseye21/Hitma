@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_margin="20dp"
+android:background="#ffffff"
+android:gravity="center">
+
+<ImageView
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_marginTop="20dp"
+    app:srcCompat="@drawable/sucess_icon"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ok, That's perfect. You are doing good!"
+    android:drawableLeft="@drawable/correct_green"
+    android:gravity="center_vertical"
+    android:paddingTop="20dp"
+    android:textColor="#59E50C"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="You have successfully unlocked the next topic;"
+    android:gravity="center_vertical"
+    android:textColor="#59E50C"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="''Other Stakeholders''"
+    android:id="@+id/status"
+    android:gravity="center_vertical"
+    android:textColor="#000000"
+    android:paddingTop="20dp"
+    android:textSize="16dp"
+    android:textStyle="bold"/>
+
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your score: "
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:paddingTop="20dp"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/scores"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:paddingTop="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / 4"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:paddingTop="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="CONTINUE"
+    android:layout_marginTop="30dp"
+    android:textColor="#ffffff"
+    android:id="@+id/conti"
+    android:background="@drawable/whiteexteriorgreeninterior"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:layout_marginBottom="20dp"
+    android:textStyle="bold"/>
+
+</LinearLayout>

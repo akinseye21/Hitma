@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+        <item android:id="@+id/dashboard"
+            android:icon="@drawable/dashboard"
+            android:iconTintMode="add"
+            android:title="Dashboard"/>
+    </group>
+    <group
+        android:id="@+id/grp3"
+        android:checkableBehavior="single">
+        <item android:id="@+id/notification"
+            android:icon="@drawable/notification"
+            android:iconTintMode="add"
+            android:title="Notifications"/>
+    </group>
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
+        <item android:id="@+id/trainingmodules"
+            android:icon="@drawable/training"
+            android:iconTintMode="add"
+            android:title="Training Modules"/>
+    </group>
+    <group
+        android:id="@+id/grp5"
+        android:checkableBehavior="single">
+        <item android:id="@+id/progressreport"
+            android:icon="@drawable/progress"
+            android:iconTintMode="add"
+            android:title="Progress Report"/>
+    </group>
+    <group
+        android:id="@+id/grp6"
+        android:checkableBehavior="single">
+        <item android:id="@+id/inechotlines"
+            android:icon="@drawable/hotline"
+            android:iconTintMode="add"
+            android:title="INEC Hotlines"/>
+    </group>
+    <group
+        android:id="@+id/grp7"
+        android:checkableBehavior="single">
+        <item android:id="@+id/abouthandout"
+            android:icon="@drawable/about"
+            android:iconTintMode="add"
+            android:title="About Handout"/>
+    </group>
+    <group
+        android:id="@+id/grp10"
+        android:checkableBehavior="single">
+        <item android:id="@+id/invitefriends"
+            android:icon="@drawable/exit"
+            android:iconTintMode="add"
+            android:title="Invite Friends"/>
+    </group>
+    <group
+        android:id="@+id/grp8"
+        android:checkableBehavior="single">
+        <item android:id="@+id/settings"
+            android:icon="@drawable/settingico"
+            android:iconTintMode="add"
+            android:title="Settings"/>
+    </group>
+    <group
+        android:id="@+id/grp9"
+        android:checkableBehavior="single">
+        <item android:id="@+id/signout"
+            android:icon="@drawable/exit"
+            android:iconTintMode="add"
+            android:title="Sign Out"/>
+    </group>
+
+
+</menu>

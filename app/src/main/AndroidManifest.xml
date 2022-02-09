@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hitma">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Question14"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".Question13"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".Question12"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".Question1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".PdfViewChapter4"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".PdfViewChapter3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".PdfViewChapter2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".PdfViewChapter1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".InecCourseFour"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".InecCourseThree"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".InecCourseTwo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".InecCourseOne"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaEditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaSettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaInviteFriends"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaHotline"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaProgressReport"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaNotification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg"/>
+        <activity
+            android:name=".ItmaDashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg" />
+        <activity
+            android:name=".ItmaSignupPage2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg" />
+        <activity
+            android:name=".ItmaLogin2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg" />
+        <activity
+            android:name=".ItmaSignupPage1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg" />
+        <activity
+            android:name=".ItmaLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.bg">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

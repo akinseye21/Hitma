@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Hitma</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="school_prompt">Choose Your School</string>
+    <string name="faculty_prompt">Faculty / School</string>
+    <string name="department_prompt">Choose Your Department</string>
+    <string name="level_prompt">Choose Your Level</string>
+    <string name="state_prompt">State of Residence</string>
+    <string name="gender_prompt">Select Gender</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="schools">
+        <item>Ahmadu Bello University</item>
+        <item>Afe Babalola University</item>
+        <item>Adekunle Ajasin University</item>
+        <item>Babcock University</item>
+        <item>Bells Universiy</item>
+        <item>Federal University Of Tech. Akure</item>
+        <item>Federal University Of Tech. Minna</item>
+        <item>Igbinedion University</item>
+        <item>Joseph Ayo Babalola University</item>
+        <item>Kwara State University</item>
+        <item>Lagos State University</item>
+        <item>Obafemi Awolowo University Ife</item>
+        <item>University Of Lagos</item>
+        <item>University Of Ibadan</item>
+    </string-array>
+
+    <string-array name="faculty">
+        <item>Art</item>
+        <item>Engineering</item>
+        <item>Agric</item>
+        <item>Law</item>
+        <item>Social Science</item>
+        <item>Management Science</item>
+        <item>Science</item>
+        <item>Education</item>
+    </string-array>
+
+    <string-array name="department">
+        <item>Architechture</item>
+        <item>Banking and Finance</item>
+        <item>Chemistry</item>
+        <item>Civil Engineering</item>
+        <item>Computer Science</item>
+        <item>Economics</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Law</item>
+        <item>Linguistics and Languages</item>
+        <item>Mathematics</item>
+        <item>Petroleum Engineering</item>
+        <item>Quantity Survey</item>
+        <item>Statistics</item>
+    </string-array>
+
+    <string-array name="level">
+        <item>100 Level</item>
+        <item>200 Level</item>
+        <item>300 Level</item>
+        <item>400 Level</item>
+        <item>500 Level</item>
+    </string-array>
+
+    <string-array name="states">
+        <item>State of Residence...</item>
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Enugu</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Gombe</item>
+        <item>Imo</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Select Gender...</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

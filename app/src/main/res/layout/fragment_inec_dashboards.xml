@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".InecDashboards">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="#ffffff"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/course_1"
+                    android:id="@+id/rt1"
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chapter One"
+                        android:textSize="10dp"
+                        android:textColor="#ffffff"
+                        android:onClick="course1"
+                        android:background="@drawable/chapter_one"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/course_2"
+                    android:layout_toRightOf="@+id/rt1"
+                    android:layout_margin="5dp"
+                    android:id="@+id/rt2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chapter Two"
+                        android:textSize="10dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/chapter_two"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:layout_alignParentRight="true"/>
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        app:srcCompat="@drawable/padlock"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/rt1"
+                    android:id="@+id/rt11"
+                    android:layout_marginBottom="16dp"
+                    android:background="#005826"
+                    android:onClick="course1"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Election Officials, Stakeholders and Materials"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp"
+                        android:padding="5dp"
+                        android:id="@+id/txt_course1"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/rt2"
+                    android:layout_marginBottom="16dp"
+                    android:background="#005826"
+                    android:id="@+id/rt22"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Election Procedures"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp"
+                        android:padding="10dp"
+                        android:id="@+id/txt_course2"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rt3"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/course_3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/chapter_three"
+                        android:padding="5dp"
+                        android:text="Chapter Three"
+                        android:textColor="#ffffff"
+                        android:textSize="10dp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/padlock" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rt4"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/rt3"
+                    android:background="@drawable/course_4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/chapter_four"
+                        android:padding="5dp"
+                        android:text="Chapter Four"
+                        android:textColor="#ffffff"
+                        android:textSize="10dp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/padlock" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/rt3"
+                    android:layout_marginBottom="16dp"
+                    android:background="#005826"
+                    android:id="@+id/rt33"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_course3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Collation and Declaration of Results"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/rt4"
+                    android:layout_marginBottom="16dp"
+                    android:background="#005826"
+                    android:id="@+id/rt44"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_course4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Miscellaneous"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
