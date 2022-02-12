@@ -84,6 +84,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[1]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[1])){
@@ -92,6 +94,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[2]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[2])){
@@ -100,6 +104,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[3]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[3])){
@@ -108,6 +114,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[4]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[4])){
@@ -116,6 +124,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[5]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[5])){
@@ -124,6 +134,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[6]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[6])){
@@ -132,6 +144,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[7]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[7])){
@@ -140,6 +154,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[8]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[8])){
@@ -148,6 +164,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[9]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[9])){
@@ -156,6 +174,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[10]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
             if (courseName.equals(chap1courses[10])){
@@ -165,6 +185,8 @@ public class InecCourseOne extends AppCompatActivity {
 
                 Intent i = new Intent(InecCourseOne.this, PdfViewChapter1.class);
                 i.putExtra("string1", str1);
+                i.putExtra("chapter_name", chap1courses[11]);
+                i.putExtra("module", module1);
                 startActivity(i);
             }
 

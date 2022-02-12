@@ -96,7 +96,7 @@ public class ProgressReport extends Fragment {
         final TextView weekly_ranks = v.findViewById(R.id.weekly_ranking);
         final TextView overall_ranks = v.findViewById(R.id.overall_ranking);
 
-        final String RANKING_URL = "http://54.71.22.155/hitma/mobile/user_rank";
+        final String RANKING_URL = "http://35.84.44.203/hitma/mobile/ranking";
         final ProgressDialog progressDialog = new ProgressDialog(getActivity().getApplicationContext());
 
         //using shared preference to get the email address passed
@@ -114,30 +114,34 @@ public class ProgressReport extends Fragment {
 
                             // get JSONObject from JSON file
                             JSONObject jsonObject = new JSONObject(response);
-                            String overall_course_completed = jsonObject.getString("overall_course_completed");
-                            String overall_course_percentage = jsonObject.getString("overall_course_percent");
-                            String overall_rank = jsonObject.getString("overall_rank");
-                            String overall_tests_completed = jsonObject.getString("overall_test_completed");
-                            String overall_no_of_attempts = jsonObject.getString("overall_no_of_attempts");
-                            String weekly_rank = jsonObject.getString("weekly_rank");
-                            String weekly_course_completed = jsonObject.getString("weekly_course_completed");
-                            String weekly_test_completed = jsonObject.getString("weekly_test_completed");
-                            String weekly_no_of_attempts = jsonObject.getString("weekly_no_of_attempts");
+//                            String overall_course_completed = jsonObject.getString("overall_course_completed");
+//                            String overall_course_percentage = jsonObject.getString("overall_course_percent");
+//                            String overall_rank = jsonObject.getString("overall_rank");
+//                            String overall_tests_completed = jsonObject.getString("overall_test_completed");
+//                            String overall_no_of_attempts = jsonObject.getString("overall_no_of_attempts");
+//                            String weekly_rank = jsonObject.getString("weekly_rank");
+//                            String weekly_course_completed = jsonObject.getString("weekly_course_completed");
+//                            String weekly_test_completed = jsonObject.getString("weekly_test_completed");
+//                            String weekly_no_of_attempts = jsonObject.getString("weekly_no_of_attempts");
 
-                            overall_ranks.setText(overall_rank);
-                            weekly_ranks.setText(weekly_rank);
-                            total_test_completed.setText(overall_tests_completed);
-                            test_completed_weekly.setText(weekly_test_completed);
-                            course_completed_weekly.setText(weekly_course_completed);
-                            total_course_completed.setText(overall_course_completed);
-                            total_course_completed_percentage.setText(overall_course_percentage);
-                            total_test_completed_percentage.setText(overall_no_of_attempts);
+                            String rank = jsonObject.getString("rank");
+                            String test_completed = jsonObject.getString("test_completed");
+                            String no_of_attempts = jsonObject.getString("no_of_attempts");
+
+                            overall_ranks.setText(rank);
+//                            weekly_ranks.setText(weekly_rank);
+                            total_test_completed.setText(test_completed);
+//                            test_completed_weekly.setText(weekly_test_completed);
+//                            course_completed_weekly.setText(weekly_course_completed);
+//                            total_course_completed.setText(overall_course_completed);
+//                            total_course_completed_percentage.setText(overall_course_percentage);
+                            total_test_completed_percentage.setText(no_of_attempts);
 
 
 
                         }catch (JSONException e){
                             e.printStackTrace();
-                            Toast.makeText(getActivity().getApplicationContext(), "Problem loading ranks"+e.getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "Problem loading ranks 1 "+e.getMessage(), Toast.LENGTH_LONG).show();
                             System.out.print("JSONException error = "+e.getMessage());
                         }
 
@@ -149,7 +153,7 @@ public class ProgressReport extends Fragment {
 
                         //progressDialog.dismiss();
 
-                        Toast.makeText(getActivity().getApplicationContext(), "Problem loading ranks "+error.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(), "Problem loading ranks 2 "+error.getMessage(), Toast.LENGTH_LONG).show();
                         System.out.print("On response error = "+error.getMessage());
                     }
                 }){

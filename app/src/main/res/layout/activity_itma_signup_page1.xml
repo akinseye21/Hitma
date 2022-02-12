@@ -23,74 +23,112 @@
             android:focusableInTouchMode="true"
             app:srcCompat="@drawable/hitmalogo"/>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/whitelineexterior"
-            android:hint="Full Name"
-            android:id="@+id/full_name"
-            android:textColorHint="#515a5a"
-            android:textSize="15dp"
-            android:textColor="#ffffff"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:drawableRight="@drawable/bc"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/whitelineexterior"
+                android:hint="Full Name"
+                android:id="@+id/full_name"
+                android:singleLine="true"
+                android:textColorHint="#515a5a"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/bc"/>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/whitelineexterior"
-            android:hint="Your Email Address"
-            android:id="@+id/email"
-            android:textColorHint="#515a5a"
-            android:textSize="15dp"
-            android:inputType="textEmailAddress"
-            android:textColor="#ffffff"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:drawableRight="@drawable/bf"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/whitelineexterior"
-            android:hint="Your Phone Number"
-            android:id="@+id/phone"
-            android:textColorHint="#515a5a"
-            android:textSize="15dp"
-            android:inputType="number"
-            android:textColor="#ffffff"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:drawableRight="@drawable/bg"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/whitelineexterior"
+                android:hint="Your Email Address"
+                android:id="@+id/email"
+                android:singleLine="true"
+                android:textColorHint="#515a5a"
+                android:textSize="15dp"
+                android:inputType="textEmailAddress"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/bf"/>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/whitelineexterior"
-            android:hint="Password"
-            android:id="@+id/pword"
-            android:textColorHint="#515a5a"
-            android:textSize="15dp"
-            android:inputType="textPassword"
-            android:textColor="#ffffff"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:drawableRight="@drawable/bd"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:background="@drawable/whitelineexterior"
-            android:hint="Repeat Password"
-            android:id="@+id/confirmpword"
-            android:textColorHint="#515a5a"
-            android:textSize="15dp"
-            android:inputType="textPassword"
-            android:textColor="#ffffff"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:drawableRight="@drawable/bd"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/whitelineexterior"
+                android:hint="Your Phone Number"
+                android:id="@+id/phone"
+                android:singleLine="true"
+                android:textColorHint="#515a5a"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/bg"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#ffffff">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/whitelineexterior"
+                android:hint="Password"
+                android:id="@+id/pword"
+                android:singleLine="true"
+                android:textColorHint="#515a5a"
+                android:textSize="15dp"
+                android:inputType="textPassword"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/bd"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#ffffff"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#ffffff">
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/whitelineexterior"
+                android:hint="Repeat Password"
+                android:id="@+id/confirmpword"
+                android:singleLine="true"
+                android:textColorHint="#515a5a"
+                android:textSize="15dp"
+                android:inputType="textPassword"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:drawableRight="@drawable/bd"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:layout_width="200dp"

@@ -35,7 +35,7 @@ public class PdfViewChapter1 extends AppCompatActivity {
     ImageView back;
 
 
-    public static final String QUESTION_URL = "http://54.71.22.155/hitma/mobile/questions";
+    public static final String QUESTION_URL = "http://35.84.44.203/hitma/mobile/questions";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

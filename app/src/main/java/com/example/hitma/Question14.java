@@ -32,7 +32,7 @@ import java.util.Map;
 
 public class Question14 extends AppCompatActivity {
 
-    public static final String RESULT_URL = "http://54.71.22.155/hitma/mobile/results";
+    public static final String RESULT_URL = "http://35.84.44.203/hitma/mobile/results";
 
     Button check, next;
     LinearLayout answer;
@@ -43,6 +43,8 @@ public class Question14 extends AppCompatActivity {
     String selected;
     String solution;
     TextView score, update, conti;
+
+    String nxtCourse;
 
     private String[] chap1courses = new String[11];
 
@@ -194,7 +196,6 @@ public class Question14 extends AppCompatActivity {
                                                                 //go to next phase of course
                                                                 //if the string in the courseName is course1, move to the course2 content. If coourse2, move to course 3. etc
 
-                                                                String nxtCourse = "";
 
                                                                 if (courseName.equals(chap1courses[0])){
                                                                     //set nxtCourse string to be for course 2
@@ -245,6 +246,7 @@ public class Question14 extends AppCompatActivity {
                                                                 //send the courseName to course1
                                                                 Intent w = new Intent(Question14.this, InecCourseOne.class);
                                                                 w.putExtra("courseName", nxtCourse);
+                                                                w.putExtra("chapter_name", chapter_name);
                                                                 w.putExtra("stats", statme);
                                                                 startActivity(w);
 
@@ -261,7 +263,7 @@ public class Question14 extends AppCompatActivity {
                                                 new Response.ErrorListener() {
                                                     @Override
                                                     public void onErrorResponse(VolleyError error) {
-                                                        Toast.makeText(Question14.this, "Something is wrong", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(Question14.this, "Something is wrong "+error.getMessage(), Toast.LENGTH_LONG).show();
                                                         System.out.print(error.getMessage());
                                                     }
                                                 }){

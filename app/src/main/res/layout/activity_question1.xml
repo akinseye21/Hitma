@@ -201,7 +201,7 @@
             android:layout_marginBottom="20dp"
             android:orientation="horizontal"
             android:id="@+id/txtanswer"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:background="@drawable/whiteexteriorgreeninterior">
 
             <TextView
@@ -241,7 +241,7 @@
             android:id="@+id/btnnext"
             android:background="@drawable/whiteexteriorgreeninterior"
             android:textColor="#ffffff"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_gravity="center"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="30dp"/>

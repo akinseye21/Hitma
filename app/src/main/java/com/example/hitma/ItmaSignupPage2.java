@@ -45,7 +45,7 @@ public class ItmaSignupPage2 extends AppCompatActivity implements DatePickerDial
     String flag;
     private ProgressDialog progressDialog;
 
-    public static final String UPDATE_URL = "http://54.71.22.155/hitma/mobile/register_inec";
+    public static final String UPDATE_URL = "http://35.84.44.203/hitma/mobile/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
