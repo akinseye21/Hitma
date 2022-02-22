@@ -318,7 +318,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text3"
                             android:text="Persons allowed into the Polling \nStations/PollingUnit and Collation \nCenter on Polling day"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -330,7 +330,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -339,7 +339,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -373,7 +373,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text4"
                             android:text="Role of Security Agents"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -385,7 +385,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -394,7 +394,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -429,7 +429,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text5"
                             android:text="Appointment of Polling Agents"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -441,7 +441,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -450,7 +450,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -483,7 +483,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text6"
                             android:text="Role of Election Observers"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -495,7 +495,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -504,7 +504,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -538,7 +538,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text7"
                             android:text="Role of Accredited Journalists"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -550,7 +550,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -559,7 +559,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -592,7 +592,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text8"
                             android:text="Media Interviews"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -604,7 +604,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -613,7 +613,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -688,7 +688,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text9"
                             android:text="Locating the Polling Unit (PU)"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -700,7 +700,7 @@
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -709,7 +709,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -742,7 +742,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text10"
                             android:text="Registration Area Centres (RACs)"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -754,7 +754,7 @@
                         android:layout_centerVertical="true"
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -763,7 +763,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />
@@ -796,7 +796,7 @@
                             android:paddingLeft="4dp"
                             android:id="@+id/text11"
                             android:text="The Election Monitoring and Support \nCentre (EMSC)"
-                            android:textColor="#c0c0c0"
+                            android:textColor="#000000"
                             android:textSize="12dp" />
 
                     </LinearLayout>
@@ -808,7 +808,7 @@
                         android:layout_centerVertical="true"
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="80dp"
-                        app:srcCompat="@drawable/green_lock_icon" />
+                        app:srcCompat="@drawable/complete" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -817,7 +817,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginEnd="35dp"
                         android:text="Active"
-                        android:visibility="invisible"
+                        android:visibility="visible"
                         android:textColor="#000000"
                         android:textSize="7dp"
                         android:textStyle="italic" />

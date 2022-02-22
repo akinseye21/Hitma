@@ -38,6 +38,8 @@ public class Question14 extends AppCompatActivity {
     LinearLayout answer;
     TextView answ;
     ImageView ansimg;
+    ImageView popImage;
+    TextView poptext1, poptext2;
     RadioGroup radioGroup;
     RadioButton radioButton;
     String selected;
@@ -56,6 +58,7 @@ public class Question14 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question14);
 
+        TextView chap_name = findViewById(R.id.txt);
         TextView quest = findViewById(R.id.question);
         TextView course_name = findViewById(R.id.nameofcourse);
         TextView questNum = findViewById(R.id.questionNumber);
@@ -113,6 +116,7 @@ public class Question14 extends AppCompatActivity {
         //System.out.println("Correct answer = "+correct_option_list.get(3));
 
         //questNum.setText(j++);
+        chap_name.setText(module);
         course_name.setText(courseName);
         quest.setText(question_list.get(3));
         opt1.setText(optionA_list.get(3));
@@ -155,7 +159,7 @@ public class Question14 extends AppCompatActivity {
                         answer.setVisibility(View.VISIBLE);
                         next.setVisibility(View.VISIBLE);
                         //next.setText("NEXT");
-                        check.setVisibility(View.INVISIBLE);
+                        check.setVisibility(View.GONE);
 
                         //increase the counter by 1
                         counter = counter + 1;
@@ -175,116 +179,134 @@ public class Question14 extends AppCompatActivity {
                                 score = dialog.findViewById(R.id.scores);
                                 update = dialog.findViewById(R.id.status);
                                 conti = dialog.findViewById(R.id.conti);
+
+                                popImage = dialog.findViewById(R.id.popImage);
+                                poptext1 = dialog.findViewById(R.id.text1);
+                                poptext2 = dialog.findViewById(R.id.text2);
+
+                                if (counter<3){
+                                    popImage.setImageResource(R.drawable.cryicon);
+                                    poptext1.setText("Not a good score!!");
+                                    poptext1.setTextColor(Color.RED);
+                                    poptext2.setText("You can do better next time.");
+                                    poptext2.setTextColor(Color.RED);
+                                }
+
                                 score.setText(String.valueOf(counter));
                                 update.setText("Question 1= "+status1+"\nQuestion 2= "+status2+"\nQuestion 3= "+status3+"\nQuestion 4= "+status4);
                                 conti.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
-                                        //send fields to server
-                                        StringRequest stringRequest = new StringRequest(Request.Method.POST, RESULT_URL,
-                                                new Response.Listener<String>() {
-                                                    @Override
-                                                    public void onResponse(String response) {
-                                                        try{
-
-                                                            // get JSONObject from JSON file
-                                                            JSONObject jsonObject = new JSONObject(response);
-                                                            String stats_course = jsonObject.getString("test_status");
-
-                                                            if (stats_course.equals("next course")){
-                                                                //go to next phase of course
-                                                                //if the string in the courseName is course1, move to the course2 content. If coourse2, move to course 3. etc
-
-
-                                                                if (courseName.equals(chap1courses[0])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[0];
-                                                                }
-                                                                if (courseName.equals(chap1courses[1])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[1];
-                                                                }
-                                                                if (courseName.equals(chap1courses[2])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[2];
-                                                                }
-                                                                if (courseName.equals(chap1courses[3])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[3];
-                                                                }
-                                                                if (courseName.equals(chap1courses[4])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[4];
-                                                                }
-                                                                if (courseName.equals(chap1courses[5])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[5];
-                                                                }
-                                                                if (courseName.equals(chap1courses[6])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[6];
-                                                                }
-                                                                if (courseName.equals(chap1courses[7])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[7];
-                                                                }
-                                                                if (courseName.equals(chap1courses[8])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[8];
-                                                                }
-                                                                if (courseName.equals(chap1courses[9])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[9];
-                                                                }
-                                                                if (courseName.equals(chap1courses[10])){
-                                                                    //move to course 2
-                                                                }
-
-                                                                String statme = "true";
-
-                                                                //send the courseName to course1
-                                                                Intent w = new Intent(Question14.this, InecCourseOne.class);
-                                                                w.putExtra("courseName", nxtCourse);
+//                                        //send fields to server
+//                                        StringRequest stringRequest = new StringRequest(Request.Method.POST, RESULT_URL,
+//                                                new Response.Listener<String>() {
+//                                                    @Override
+//                                                    public void onResponse(String response) {
+//                                                        try{
+//                                                            // get JSONObject from JSON file
+//                                                            JSONObject jsonObject = new JSONObject(response);
+//                                                            System.out.println("Continue click = "+response);
+//
+//                                                            String stats_course = jsonObject.getString("test_status");
+//
+//                                                            if (stats_course.equals("next course")){
+//                                                                //go to next phase of course
+//                                                                //if the string in the courseName is course1, move to the course2 content. If coourse2, move to course 3. etc
+//
+//
+//                                                                if (courseName.equals(chap1courses[0])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[0];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[1])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[1];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[2])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[2];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[3])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[3];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[4])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[4];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[5])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[5];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[6])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[6];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[7])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[7];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[8])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[8];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[9])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[9];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[10])){
+//                                                                    //move to course 2
+//                                                                }
+//
+////                                                                String statme = "true";
+//
+//                                                                //send the courseName to course1
+//                                                                Intent w = new Intent(Question14.this, InecCourseOne.class);
+////                                                                w.putExtra("courseName", nxtCourse);
+////                                                                w.putExtra("chapter_name", chapter_name);
+////                                                                w.putExtra("stats", statme);
+//                                                                startActivity(w);
+//
+//                                                            }
+//
+//
+//                                                        }catch (JSONException e){
+//                                                            e.printStackTrace();
+//                                                            Toast.makeText(getApplicationContext(), "Weird", Toast.LENGTH_LONG).show();
+//                                                        }
+//
+//                                                    }
+//                                                },
+//                                                new Response.ErrorListener() {
+//                                                    @Override
+//                                                    public void onErrorResponse(VolleyError error) {
+//                                                        Toast.makeText(Question14.this, "Something is wrong "+error.getMessage(), Toast.LENGTH_LONG).show();
+//                                                        System.out.print(error.getMessage());
+//                                                    }
+//                                                }){
+//                                            @Override
+//                                            protected Map<String, String> getParams(){
+//                                                Map<String, String> params = new HashMap<String, String>();
+//                                                params.put("email", email_add);
+//                                                params.put("course", courseName);
+//                                                params.put("module", module);
+//                                                params.put("chapter", chapter_name);
+//                                                params.put("question_1", status1);
+//                                                params.put("question_2", status2);
+//                                                params.put("question_3", status3);
+//                                                params.put("question_4", status4);
+//                                                return params;
+//                                            }
+//                                        };
+//
+//                                        RequestQueue requestQueue = Volley.newRequestQueue(Question14.this);
+//                                        requestQueue.add(stringRequest);
+                                        //send the courseName to course1
+                                        Intent w = new Intent(Question14.this, InecCourseOne.class);
+//                                                                w.putExtra("courseName", nxtCourse);
                                                                 w.putExtra("chapter_name", chapter_name);
-                                                                w.putExtra("stats", statme);
-                                                                startActivity(w);
-
-                                                            }
-
-
-                                                        }catch (JSONException e){
-                                                            e.printStackTrace();
-                                                            Toast.makeText(getApplicationContext(), "Weird", Toast.LENGTH_LONG).show();
-                                                        }
-
-                                                    }
-                                                },
-                                                new Response.ErrorListener() {
-                                                    @Override
-                                                    public void onErrorResponse(VolleyError error) {
-                                                        Toast.makeText(Question14.this, "Something is wrong "+error.getMessage(), Toast.LENGTH_LONG).show();
-                                                        System.out.print(error.getMessage());
-                                                    }
-                                                }){
-                                            @Override
-                                            protected Map<String, String> getParams(){
-                                                Map<String, String> params = new HashMap<String, String>();
-                                                params.put("email", email_add);
-                                                params.put("course", courseName);
-                                                params.put("module", module);
-                                                params.put("chapter", chapter_name);
-                                                params.put("question_1", status1);
-                                                params.put("question_2", status2);
-                                                params.put("question_3", status3);
-                                                params.put("question_4", status4);
-                                                return params;
-                                            }
-                                        };
-
-                                        RequestQueue requestQueue = Volley.newRequestQueue(Question14.this);
-                                        requestQueue.add(stringRequest);
-
+//                                                                w.putExtra("stats", statme);
+                                        startActivity(w);
                                     }
                                 });
                                 dialog.show();
@@ -318,119 +340,136 @@ public class Question14 extends AppCompatActivity {
                                 score = dialog.findViewById(R.id.scores);
                                 update = dialog.findViewById(R.id.status);
                                 conti = dialog.findViewById(R.id.conti);
+
+                                popImage = dialog.findViewById(R.id.popImage);
+                                poptext1 = dialog.findViewById(R.id.text1);
+                                poptext2 = dialog.findViewById(R.id.text2);
+
+                                if (counter<3){
+                                    popImage.setImageResource(R.drawable.cryicon);
+                                    poptext1.setText("Not a good score!!");
+                                    poptext1.setTextColor(Color.RED);
+                                    poptext2.setText("You can do better next time.");
+                                    poptext2.setTextColor(Color.RED);
+                                }
+
                                 score.setText(String.valueOf(counter));
                                 update.setText("Question 1= "+status1+"\nQuestion 2= "+status2+"\nQuestion 3= "+status3+"\nQuestion 4= "+status4);
 
                                 conti.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
-
-
-                                        //send fields to server
-                                        StringRequest stringRequest = new StringRequest(Request.Method.POST, RESULT_URL,
-                                                new Response.Listener<String>() {
-                                                    @Override
-                                                    public void onResponse(String response) {
-                                                        try{
-
-                                                            // get JSONObject from JSON file
-                                                            JSONObject jsonObject = new JSONObject(response);
-                                                            String stats_course = jsonObject.getString("test_status");
-
-                                                            if (stats_course.equals("repeat course")) {
-                                                                //go back to the initial course
-                                                                Toast.makeText(getApplicationContext(), email_add+" You fail "+response, Toast.LENGTH_LONG).show();
-                                                                System.out.println("You fail "+response);
-
-                                                                String nxtCourse = "";
-
-                                                                if (courseName.equals(chap1courses[0])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[0];
-                                                                }
-                                                                if (courseName.equals(chap1courses[1])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[1];
-                                                                }
-                                                                if (courseName.equals(chap1courses[2])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[2];
-                                                                }
-                                                                if (courseName.equals(chap1courses[3])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[3];
-                                                                }
-                                                                if (courseName.equals(chap1courses[4])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[4];
-                                                                }
-                                                                if (courseName.equals(chap1courses[5])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[5];
-                                                                }
-                                                                if (courseName.equals(chap1courses[6])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[6];
-                                                                }
-                                                                if (courseName.equals(chap1courses[7])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[7];
-                                                                }
-                                                                if (courseName.equals(chap1courses[8])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[8];
-                                                                }
-                                                                if (courseName.equals(chap1courses[9])){
-                                                                    //set nxtCourse string to be for course 2
-                                                                    nxtCourse = chap1courses[9];
-                                                                }
-                                                                if (courseName.equals(chap1courses[10])){
-                                                                    //
-                                                                    nxtCourse = chap1courses[10];
-                                                                }
-
-                                                                String statme = "stay";
-
-                                                                //send the courseName to course1
-                                                                Intent w = new Intent(Question14.this, InecCourseOne.class);
-                                                                w.putExtra("courseName", nxtCourse);
-                                                                w.putExtra("stats", statme);
-                                                                startActivity(w);
-                                                            }
-
-                                                        }catch (JSONException e){
-                                                            e.printStackTrace();
-                                                            Toast.makeText(getApplicationContext(), "Weird", Toast.LENGTH_LONG).show();
-                                                        }
-
-                                                    }
-                                                },
-                                                new Response.ErrorListener() {
-                                                    @Override
-                                                    public void onErrorResponse(VolleyError error) {
-                                                        Toast.makeText(Question14.this, "Something is wrong", Toast.LENGTH_LONG).show();
-                                                        System.out.print(error.getMessage());
-                                                    }
-                                                }){
-                                            @Override
-                                            protected Map<String, String> getParams(){
-                                                Map<String, String> params = new HashMap<String, String>();
-                                                params.put("email", email_add);
-                                                params.put("module", module);
-                                                params.put("chapter", chapter_name);
-                                                params.put("course", courseName);
-                                                params.put("question_1", status1);
-                                                params.put("question_2", status2);
-                                                params.put("question_3", status3);
-                                                params.put("question_4", status4);
-                                                return params;
-                                            }
-                                        };
-
-                                        RequestQueue requestQueue = Volley.newRequestQueue(Question14.this);
-                                        requestQueue.add(stringRequest);
-
+//                                        //send fields to server
+//                                        StringRequest stringRequest = new StringRequest(Request.Method.POST, RESULT_URL,
+//                                                new Response.Listener<String>() {
+//                                                    @Override
+//                                                    public void onResponse(String response) {
+//                                                        try{
+//
+//                                                            // get JSONObject from JSON file
+//                                                            JSONObject jsonObject = new JSONObject(response);
+//                                                            System.out.println("Continue click 2 = "+response);
+//
+//                                                            String stats_course = jsonObject.getString("test_status");
+//
+//                                                            if (stats_course.equals("repeat course")) {
+//                                                                //go back to the initial course
+//                                                                Toast.makeText(getApplicationContext(), email_add+" You fail "+response, Toast.LENGTH_LONG).show();
+//                                                                System.out.println("You fail "+response);
+//
+//                                                                String nxtCourse = "";
+//
+//                                                                if (courseName.equals(chap1courses[0])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[0];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[1])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[1];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[2])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[2];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[3])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[3];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[4])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[4];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[5])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[5];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[6])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[6];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[7])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[7];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[8])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[8];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[9])){
+//                                                                    //set nxtCourse string to be for course 2
+//                                                                    nxtCourse = chap1courses[9];
+//                                                                }
+//                                                                if (courseName.equals(chap1courses[10])){
+//                                                                    //
+//                                                                    nxtCourse = chap1courses[10];
+//                                                                }
+//
+////                                                                String statme = "stay";
+//
+//                                                                //send the courseName to course1
+//                                                                Intent w = new Intent(Question14.this, InecCourseOne.class);
+////                                                                w.putExtra("courseName", nxtCourse);
+////                                                                w.putExtra("stats", statme);
+//                                                                startActivity(w);
+//                                                            }
+//
+//                                                        }catch (JSONException e){
+//                                                            e.printStackTrace();
+//                                                            Toast.makeText(getApplicationContext(), "Weird", Toast.LENGTH_LONG).show();
+//                                                        }
+//
+//                                                    }
+//                                                },
+//                                                new Response.ErrorListener() {
+//                                                    @Override
+//                                                    public void onErrorResponse(VolleyError error) {
+//                                                        Toast.makeText(Question14.this, "Something is wrong", Toast.LENGTH_LONG).show();
+//                                                        System.out.print(error.getMessage());
+//                                                    }
+//                                                }){
+//                                            @Override
+//                                            protected Map<String, String> getParams(){
+//                                                Map<String, String> params = new HashMap<String, String>();
+//                                                params.put("email", email_add);
+//                                                params.put("module", module);
+//                                                params.put("chapter", chapter_name);
+//                                                params.put("course", courseName);
+//                                                params.put("question_1", status1);
+//                                                params.put("question_2", status2);
+//                                                params.put("question_3", status3);
+//                                                params.put("question_4", status4);
+//                                                return params;
+//                                            }
+//                                        };
+//
+//                                        RequestQueue requestQueue = Volley.newRequestQueue(Question14.this);
+//                                        requestQueue.add(stringRequest);
+                                        //send the courseName to course1
+                                        Intent w = new Intent(Question14.this, InecCourseOne.class);
+//                                                                w.putExtra("courseName", nxtCourse);
+                                        w.putExtra("chapter_name", chapter_name);
+//                                                                w.putExtra("stats", statme);
+                                        startActivity(w);
                                     }
                                 });
 

@@ -95,6 +95,7 @@ public class ProgressReport extends Fragment {
         final TextView total_test_completed_percentage = v.findViewById(R.id.total_test_completed_percentage);
         final TextView weekly_ranks = v.findViewById(R.id.weekly_ranking);
         final TextView overall_ranks = v.findViewById(R.id.overall_ranking);
+        final TextView txt_email = v.findViewById(R.id.email);
 
         final String RANKING_URL = "http://35.84.44.203/hitma/mobile/ranking";
         final ProgressDialog progressDialog = new ProgressDialog(getActivity().getApplicationContext());
@@ -102,6 +103,7 @@ public class ProgressReport extends Fragment {
         //using shared preference to get the email address passed
         SharedPreferences pref = getActivity().getApplicationContext().getSharedPreferences("MyPref", Context.MODE_PRIVATE);
         final String mai = pref.getString("email", "");
+        txt_email.setText(mai);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, RANKING_URL,
                 new Response.Listener<String>() {

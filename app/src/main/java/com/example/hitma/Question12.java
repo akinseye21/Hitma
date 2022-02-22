@@ -35,6 +35,7 @@ public class Question12 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question12);
 
+        TextView chap_name = findViewById(R.id.txt);
         TextView quest = findViewById(R.id.question);
         TextView course_name = findViewById(R.id.nameofcourse);
         TextView questNum = findViewById(R.id.questionNumber);
@@ -73,6 +74,7 @@ public class Question12 extends AppCompatActivity {
         System.out.println("question 2 module = "+module);
 
         //questNum.setText(j++);
+        chap_name.setText(module);
         course_name.setText(courseName);
         quest.setText(question_list.get(1));
         opt1.setText(optionA_list.get(1));
@@ -115,7 +117,7 @@ public class Question12 extends AppCompatActivity {
                         answer.setVisibility(View.VISIBLE);
                         next.setVisibility(View.VISIBLE);
                         //next.setText("NEXT");
-                        check.setVisibility(View.INVISIBLE);
+                        check.setVisibility(View.GONE);
 
                         //increase the counter by 1
                         counter = counter + 1;

@@ -14,6 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class Question1 extends AppCompatActivity {
@@ -36,6 +38,7 @@ public class Question1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
 
+        TextView chap_name = findViewById(R.id.txt);
         TextView quest = findViewById(R.id.question);
         TextView course_name = findViewById(R.id.nameofcourse);
         TextView questNum = findViewById(R.id.questionNumber);
@@ -73,6 +76,7 @@ public class Question1 extends AppCompatActivity {
         System.out.println("question 1 module = "+module);
 
         //questNum.setText(j++);
+        chap_name.setText(module);
         course_name.setText(courseName);
         quest.setText(question_list.get(0));
         opt1.setText(optionA_list.get(0));
@@ -115,7 +119,7 @@ public class Question1 extends AppCompatActivity {
                         answer.setVisibility(View.VISIBLE);
                         next.setVisibility(View.VISIBLE);
                         //next.setText("NEXT");
-                        check.setVisibility(View.INVISIBLE);
+                        check.setVisibility(View.GONE);
 
                         //increase the counter by 1
                         counter = counter + 1;

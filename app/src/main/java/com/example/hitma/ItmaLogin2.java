@@ -90,7 +90,7 @@ public class ItmaLogin2 extends AppCompatActivity {
                 }
 
 
-                if (!TextUtils.isEmpty(email) && email.length()<100 && !TextUtils.isEmpty(password) && password.length()<20 && password.length()>5){
+                if (!TextUtils.isEmpty(email) && email.length()<100 && !TextUtils.isEmpty(password) ){
                     //send fields to server
 
 //                    JSONObject object = new JSONObject();
@@ -145,13 +145,14 @@ public class ItmaLogin2 extends AppCompatActivity {
                                         if (login_status.equals("inec login successful")){
                                             //enter the app
                                             Intent j = new Intent(ItmaLogin2.this, ItmaDashboard.class);
+                                            j.putExtra("email", email_add);
                                             startActivity(j);
                                         }
                                         else{
                                             Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_LONG).show();
-                                            System.out.println("Response = "+response);
-                                            Intent j = new Intent(ItmaLogin2.this, ItmaDashboard.class);
-                                            startActivity(j);
+//                                            System.out.println("Response = "+response);
+//                                            Intent j = new Intent(ItmaLogin2.this, ItmaDashboard.class);
+//                                            startActivity(j);
                                         }
 
                                     }catch (JSONException e){

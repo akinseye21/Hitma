@@ -45,11 +45,18 @@ public class PdfViewChapter1 extends AppCompatActivity {
         Topic = findViewById(R.id.topic);
         ImageText = findViewById(R.id.image_test);
 
+        Intent intent = getIntent();
+        final String str = intent.getStringExtra("string1");
+        final String chapter_name = intent.getStringExtra("chapter_name");
+        final String module = intent.getStringExtra("module");
+        Topic.setText(str);
+
         back = findViewById(R.id.backbtn);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent j = new Intent(PdfViewChapter1.this, InecCourseOne.class);
+                j.putExtra("chapter_name", chapter_name);
                 startActivity(j);
             }
         });
@@ -74,11 +81,7 @@ public class PdfViewChapter1 extends AppCompatActivity {
         final ArrayList<String> optionD_list = new ArrayList<String>();
         final ArrayList<String> correct_option_list = new ArrayList<String>();
 
-        Intent intent = getIntent();
-        final String str = intent.getStringExtra("string1");
-        final String chapter_name = intent.getStringExtra("chapter_name");
-        final String module = intent.getStringExtra("module");
-        Topic.setText(str);
+
 
         System.out.println("pdf module = "+module);
 
@@ -89,9 +92,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent1 = getIntent();
-                    final String str = intent1.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent1 = getIntent();
+//                    final String str = intent1.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -176,9 +179,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -219,6 +222,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -258,9 +263,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -301,6 +306,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -323,7 +330,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                         @Override
                         protected Map<String, String> getParams(){
                             Map<String, String> params = new HashMap<String, String>();
-                            params.put("course", "Persons allowed into the Polling Stations/PollingUnit and Collation Center on Polling day");
+//                            params.put("course", "Persons allowed into the Polling Stations/PollingUnit and Collation Center on Polling day");
+                            params.put("course", str);
                             return params;
                         }
                     };
@@ -340,9 +348,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -383,6 +391,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -422,9 +432,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -465,6 +475,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -504,9 +516,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -547,6 +559,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -586,9 +600,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -629,6 +643,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -668,9 +684,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -711,6 +727,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -750,9 +768,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -793,6 +811,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -832,9 +852,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -875,6 +895,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -914,9 +936,9 @@ public class PdfViewChapter1 extends AppCompatActivity {
             continu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent2 = getIntent();
-                    final String str = intent2.getStringExtra("string1");
-                    Topic.setText(str);
+//                    Intent intent2 = getIntent();
+//                    final String str = intent2.getStringExtra("string1");
+//                    Topic.setText(str);
 
                     //send str to the server
 
@@ -957,6 +979,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                                         j.putStringArrayListExtra("correct_option_list", correct_option_list);
                                         //pass the name of the course also
                                         j.putExtra("course name", str);
+                                        j.putExtra("chapter_name", chapter_name);
+                                        j.putExtra("module", module);
                                         startActivity(j);
 
 //                                        Toast.makeText(PdfViewChapter1.this, "Question list = "+ question_list, Toast.LENGTH_LONG).show();
@@ -979,7 +1003,8 @@ public class PdfViewChapter1 extends AppCompatActivity {
                         @Override
                         protected Map<String, String> getParams(){
                             Map<String, String> params = new HashMap<String, String>();
-                            params.put("course", "The Election Monitoring and Support Centre (EMSC)");
+//                            params.put("course", "The Election Monitoring and Support Centre (EMSC)");
+                            params.put("course", str);
                             return params;
                         }
                     };
